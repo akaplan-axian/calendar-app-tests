@@ -1,20 +1,41 @@
 {
   "name": "calendar-app-tests",
   "version": "1.0.0",
+  "description": "API integration tests for calendar-app-api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:verbose": "jest --verbose",
+    "test:coverage": "jest --coverage",
+    "demo": "node demo.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akaplan-axian/calendar-app-tests.git"
   },
-  "keywords": [],
+  "keywords": [
+    "api",
+    "testing",
+    "integration",
+    "openapi",
+    "calendar"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/akaplan-axian/calendar-app-tests/issues"
   },
   "homepage": "https://github.com/akaplan-axian/calendar-app-tests#readme",
-  "description": ""
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "supertest": "^7.1.4",
+    "axios": "^1.6.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "openapi-schema-validator": "^12.1.3"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
 }
