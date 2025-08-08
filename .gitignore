@@ -6,6 +6,7 @@ yarn-error.log*
 
 # Test coverage
 coverage/
+coverage-e2e/
 *.lcov
 
 # Runtime data
@@ -97,6 +98,9 @@ public
 # Temporary folders
 tmp/
 temp/
+
+# E2E test artifacts
+screenshots/
 
 # Logs
 logs
