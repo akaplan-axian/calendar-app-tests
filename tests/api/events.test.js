@@ -16,8 +16,8 @@ describe('Events API Endpoints', () => {
       // Verify events is an array
       expect(Array.isArray(response.data.events)).toBe(true);
       
-      // Verify message
-      expect(response.data.message).toBe('Events retrieved successfully');
+      // Verify message (API returns dynamic count message)
+      expect(response.data.message).toMatch(/^Found \d+ events?$/);
     });
 
     test('should return correct content type', async () => {

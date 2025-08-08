@@ -14,7 +14,7 @@ describe('Home Page E2E Test', () => {
       // Basic assertions
       expect(title).toBeDefined();
       expect(title.length).toBeGreaterThan(0);
-      expect(url).toBe(global.BASE_URL);
+      expect(url).toBe(global.BASE_URL.endsWith('/') ? global.BASE_URL : global.BASE_URL + '/');
       
       // Take a screenshot for verification
       await page.screenshot({ path: 'screenshots/home-page-loaded.png' });
