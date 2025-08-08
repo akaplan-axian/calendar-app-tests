@@ -14,7 +14,7 @@ describe('Home Page E2E Test', () => {
       // Basic assertions
       expect(title).toBeDefined();
       expect(title.length).toBeGreaterThan(0);
-      expect(url).toContain('localhost:5173');
+      expect(url).toBe(global.BASE_URL);
       
       // Take a screenshot for verification
       await page.screenshot({ path: 'screenshots/home-page-loaded.png' });
@@ -28,7 +28,7 @@ describe('Home Page E2E Test', () => {
       if (error.message.includes('net::ERR_CONNECTION_REFUSED') || 
           error.message.includes('net::ERR_INTERNET_DISCONNECTED') ||
           error.message.includes('timeout')) {
-        console.log('⚠️ Application not running on localhost:5173, which is expected in test environment');
+        console.log(`⚠️ Application not running on ${global.BASE_URL}, which is expected in test environment`);
         
         // Test basic browser functionality instead
         await page.goto('data:text/html,<html><head><title>Test Page</title></head><body><h1>Home Page Test</h1><p>Browser is working correctly</p></body></html>');

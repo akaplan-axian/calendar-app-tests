@@ -3,9 +3,10 @@ const fs = require('fs');
 
 // Import existing API utilities for integration
 const ApiClient = require('../../src/utils/api-client');
+const config = require('../../src/config/test-config');
 
 // Global E2E test variables
-global.BASE_URL = 'http://localhost:5173';
+global.BASE_URL = config.frontendUrl;
 global.apiClient = null;
 
 // Setup before all E2E tests

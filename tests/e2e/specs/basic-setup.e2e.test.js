@@ -19,13 +19,13 @@ describe('Basic E2E Setup Test', () => {
   test('should handle page navigation with timeout', async () => {
     try {
       // Test navigation with timeout
-      await page.goto('http://localhost:5173', { 
+      await page.goto(global.BASE_URL, { 
         waitUntil: 'domcontentloaded',
         timeout: 5000 
       });
-      console.log('✅ Successfully navigated to localhost:5173');
+      console.log(`✅ Successfully navigated to ${global.BASE_URL}`);
     } catch (error) {
-      console.log('⚠️ localhost:5173 not available, which is expected in test environment');
+      console.log(`⚠️ ${global.BASE_URL} not available, which is expected in test environment`);
       // This is expected if the dev server isn't running
       expect(error.message).toContain('timeout');
     }
