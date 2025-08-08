@@ -4,14 +4,9 @@
   "description": "API integration tests for calendar-app-api",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:verbose": "jest --verbose",
-    "test:coverage": "jest --coverage",
-    "test:e2e": "jest --config=jest-e2e.config.js",
-    "test:e2e:watch": "jest --config=jest-e2e.config.js --watch",
-    "test:e2e:debug": "jest --config=jest-e2e.config.js --runInBand --detectOpenHandles",
-    "demo": "node demo.js"
+    "test": "npm run test:api & npm run test:e2e",
+    "test:api": "jest --testPathIgnorePatterns='tests/e2e'",
+    "test:e2e": "jest --config=jest-e2e.config.js"
   },
   "repository": {
     "type": "git",
