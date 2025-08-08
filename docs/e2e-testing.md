@@ -1,4 +1,4 @@
-# Calendar App E2E Testing Framework
+# E2E Testing Guide
 
 This document describes the End-to-End (E2E) testing framework implemented using **Puppeteer** and **Jest** for testing the calendar web application.
 

@@ -1,4 +1,4 @@
-# Environment Configuration for Tests
+# Environment Configuration
 
 This test suite uses environment variables to configure base URLs, making it possible to run tests against different environments (local, staging, production, etc.).
 
